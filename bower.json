@@ -1,0 +1,20 @@
+{
+  "name": "purescript-opencomputers",
+  "version": "1.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "license": "BSD2",
+  "repository": {                                                          
+    "type": "git",                                                         
+    "url": "git://github.com/Xandaros/purescript-opencomputers.git"            
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+  }
+}

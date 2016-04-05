@@ -5,9 +5,9 @@
     "node"
   ],
   "license": "BSD2",
-  "repository": {                                                          
-    "type": "git",                                                         
-    "url": "git://github.com/Xandaros/purescript-opencomputers.git"            
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Xandaros/purescript-opencomputers.git"
   },
   "ignore": [
     "**/.*",
@@ -16,5 +16,34 @@
     "output"
   ],
   "dependencies": {
+    "purescript-arrays": "lua-purescript/purescript-arrays",
+    "purescript-bifunctors": "^1.0.0-rc.1",
+    "purescript-control": "^1.0.0-rc.1",
+    "purescript-eff": "lua-purescript/purescript-eff",
+    "purescript-either": "lua-purescript/purescript-either",
+    "purescript-enums": "^1.0.0-rc.1",
+    "purescript-foldable-traversable": "lua-purescript/purescript-foldable-traversable",
+    "purescript-invariant": "^1.0.0-rc.1",
+    "purescript-lazy": "lua-purescript/purescript-lazy",
+    "purescript-lists": "^1.0.0-rc.1",
+    "purescript-maybe": "lua-purescript/purescript-maybe",
+    "purescript-monoid": "^1.0.0-rc.2",
+    "purescript-partial": "lua-purescript/purescript-partial",
+    "purescript-prelude": "lua-purescript/purescript-prelude",
+    "purescript-st": "lua-purescript/purescript-st",
+    "purescript-strings": "lua-purescript/purescript-strings",
+    "purescript-tuples": "^1.0.0-rc.2",
+    "purescript-unfoldable": "^1.0.0-rc.1",
+    "purescript-unsafe-coerce": "lua-purescript/purescript-unsafe-coerce"
+  },
+  "resolutions": {
+    "purescript-invariant": "^1.0.0-rc.1",
+    "purescript-tuples": "^1.0.0-rc.2",
+    "purescript-control": "^1.0.0-rc.1",
+    "purescript-monoid": "^1.0.0-rc.2",
+    "purescript-bifunctors": "^1.0.0-rc.1",
+    "purescript-foldable-traversable": "^1.0.0-rc.1",
+    "purescript-prelude": "^1.0.0-rc.1",
+    "purescript-maybe": "^1.0.0-rc.1"
   }
 }

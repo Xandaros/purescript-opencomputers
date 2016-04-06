@@ -1,4 +1,4 @@
--- module Control.Monad.Eff.OpenComputers.Components.GPU
+-- module Control.Monad.Eff.OpenComputers.Component.GPU
 local GPU = {}
 
 local component = require("component")

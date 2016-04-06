@@ -16,34 +16,24 @@
     "output"
   ],
   "dependencies": {
-    "purescript-arrays": "lua-purescript/purescript-arrays",
+    "purescript-arrays": "lua-purescript/purescript-arrays#^1.0.0-rc.4",
     "purescript-bifunctors": "^1.0.0-rc.1",
     "purescript-control": "^1.0.0-rc.1",
-    "purescript-eff": "lua-purescript/purescript-eff",
-    "purescript-either": "lua-purescript/purescript-either",
+    "purescript-eff": "lua-purescript/purescript-eff#^1.0.0-rc.1",
+    "purescript-either": "lua-purescript/purescript-either#^1.0.0-rc.1",
     "purescript-enums": "^1.0.0-rc.1",
-    "purescript-foldable-traversable": "lua-purescript/purescript-foldable-traversable",
+    "purescript-foldable-traversable": "lua-purescript/purescript-foldable-traversable#^1.0.0-rc.1",
     "purescript-invariant": "^1.0.0-rc.1",
-    "purescript-lazy": "lua-purescript/purescript-lazy",
+    "purescript-lazy": "lua-purescript/purescript-lazy#^1.0.0-rc.1",
     "purescript-lists": "^1.0.0-rc.1",
-    "purescript-maybe": "lua-purescript/purescript-maybe",
+    "purescript-maybe": "lua-purescript/purescript-maybe#^1.0.0-rc.2",
     "purescript-monoid": "^1.0.0-rc.2",
-    "purescript-partial": "lua-purescript/purescript-partial",
-    "purescript-prelude": "lua-purescript/purescript-prelude",
-    "purescript-st": "lua-purescript/purescript-st",
-    "purescript-strings": "lua-purescript/purescript-strings",
+    "purescript-partial": "lua-purescript/purescript-partial#^1.1.0",
+    "purescript-prelude": "lua-purescript/purescript-prelude#^1.0.0-rc.3",
+    "purescript-st": "lua-purescript/purescript-st#^1.0.0-rc.1",
+    "purescript-strings": "lua-purescript/purescript-strings#^1.0.0-rc.1",
     "purescript-tuples": "^1.0.0-rc.2",
-    "purescript-unfoldable": "^1.0.0-rc.1",
-    "purescript-unsafe-coerce": "lua-purescript/purescript-unsafe-coerce"
-  },
-  "resolutions": {
-    "purescript-invariant": "^1.0.0-rc.1",
-    "purescript-tuples": "^1.0.0-rc.2",
-    "purescript-control": "^1.0.0-rc.1",
-    "purescript-monoid": "^1.0.0-rc.2",
-    "purescript-bifunctors": "^1.0.0-rc.1",
-    "purescript-foldable-traversable": "^1.0.0-rc.1",
-    "purescript-prelude": "^1.0.0-rc.1",
-    "purescript-maybe": "^1.0.0-rc.1"
+    "purescript-unfoldable": "lua-purescript/purescript-unfoldable#^1.0.0-rc.1",
+    "purescript-unsafe-coerce": "lua-purescript/purescript-unsafe-coerce#^1.0.0-rc.1"
   }
 }

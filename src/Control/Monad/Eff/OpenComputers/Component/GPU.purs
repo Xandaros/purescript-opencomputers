@@ -1,17 +1,15 @@
-module Control.Monad.Eff.OpenComputers.Components.GPU where
+module Control.Monad.Eff.OpenComputers.Component.GPU where
 
 import Prelude
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.OpenComputers (Component, Address, Proxy)
+import Control.Monad.Eff.OpenComputers.Component (GPU, Screen)
 import Control.Monad.Eff.OpenComputers.Proxy as Proxy
 import Data.Either (Either(..))
 import Data.OpenComputers.Colors (Color, RGBColor, LuaColor, toLuaColor, fromLuaColor, formatRGB, readRGB)
 import Unsafe.Coerce (unsafeCoerce)
 
 type Resolution = { width :: Int, height :: Int }
-
-foreign import data GPU :: !
-foreign import data Screen :: !
 
 getPrimary :: forall e. Eff (component :: Component | e) (Proxy GPU)
 getPrimary = unsafeCoerce <$> Proxy.getPrimary "gpu"

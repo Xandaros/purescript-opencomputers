@@ -1,0 +1,36 @@
+module Control.Monad.Eff.OpenComputers.Component where
+
+foreign import data Printer3D :: !
+--foreign import data AbstractBus :: !
+foreign import data AccessPoint :: !
+foreign import data Chunkloader :: !
+foreign import data Computer :: !
+foreign import data Crafting :: !
+foreign import data Data :: !
+foreign import data Database :: !
+foreign import data Debug :: !
+foreign import data Drone :: !
+foreign import data Drive :: !
+foreign import data EEPROM :: !
+foreign import data Experience :: !
+foreign import data Filesystem :: !
+foreign import data Generator :: !
+foreign import data Geolyzer :: !
+foreign import data GPU :: !
+foreign import data Hologram :: !
+foreign import data Internet :: !
+--foreign import data InventoryController :: !
+--foreign import data RobotInventory :: !
+foreign import data Leash :: !
+foreign import data Modem :: !
+foreign import data MotionSensor :: !
+foreign import data Navigation :: !
+foreign import data Piston :: !
+foreign import data Redstone :: !
+foreign import data Robot :: !
+foreign import data Screen :: !
+foreign import data Sign :: !
+foreign import data TankController :: !
+foreign import data TractorBeam :: !
+foreign import data Tunnel :: !
+--foreign import data WorldSensor :: !

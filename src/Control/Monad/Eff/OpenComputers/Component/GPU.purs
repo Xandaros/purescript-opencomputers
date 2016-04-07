@@ -1,4 +1,24 @@
-module Control.Monad.Eff.OpenComputers.Component.GPU where
+module Control.Monad.Eff.OpenComputers.Component.GPU
+  ( getPrimary
+  , bind
+  , getScreen
+  , getBackgroundColor
+  , setBackgroundColor
+  , getForegroundColor
+  , setForegroundColor
+  , getPaletteColor
+  , setPaletteColor
+  , maxDepth
+  , getDepth
+  , setDepth
+  , maxResolution
+  , getResolution
+  , setResolution
+  , get
+  , write
+  , copy
+  , fill
+  )where
 
 import Prelude
 import Control.Monad.Eff (Eff)

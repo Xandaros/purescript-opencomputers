@@ -29,6 +29,7 @@ foreign import data Leash :: !
 foreign import data Modem :: !
 foreign import data MotionSensor :: !
 foreign import data Navigation :: !
+foreign import data Permission :: !
 foreign import data Piston :: !
 foreign import data Redstone :: !
 foreign import data Robot :: !

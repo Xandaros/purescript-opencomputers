@@ -1,5 +1,8 @@
 module Control.Monad.Eff.OpenComputers.Component where
 
+import Prelude
+import Unsafe.Coerce (unsafeCoerce)
+
 foreign import data Printer3D :: !
 --foreign import data AbstractBus :: !
 foreign import data AccessPoint :: !
@@ -21,6 +24,7 @@ foreign import data Hologram :: !
 foreign import data Internet :: !
 --foreign import data InventoryController :: !
 --foreign import data RobotInventory :: !
+foreign import data Keyboard :: !
 foreign import data Leash :: !
 foreign import data Modem :: !
 foreign import data MotionSensor :: !
@@ -34,3 +38,14 @@ foreign import data TankController :: !
 foreign import data TractorBeam :: !
 foreign import data Tunnel :: !
 --foreign import data WorldSensor :: !
+foreign import data Window :: !
+
+type ComponentType = String
+data Address (a :: !)
+data Proxy (a :: !)
+
+foreign import data Component :: !
+foreign import data Signal :: !
+
+instance showAddress :: Show (Address a) where
+    show = unsafeCoerce

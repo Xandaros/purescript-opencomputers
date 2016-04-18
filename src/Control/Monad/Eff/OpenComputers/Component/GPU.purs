@@ -18,12 +18,12 @@ module Control.Monad.Eff.OpenComputers.Component.GPU
   , write
   , copy
   , fill
-  )where
+  , Resolution
+  ) where
 
 import Prelude
 import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.OpenComputers (Component, Address, Proxy)
-import Control.Monad.Eff.OpenComputers.Component (GPU, Screen)
+import Control.Monad.Eff.OpenComputers.Component (Component, Address, Proxy, GPU, Screen)
 import Control.Monad.Eff.OpenComputers.Proxy as Proxy
 import Data.Either (Either(..))
 import Data.OpenComputers.Colors (Color, RGBColor, LuaColor, toLuaColor, fromLuaColor, formatRGB, readRGB)

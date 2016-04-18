@@ -2,7 +2,7 @@ module Control.Monad.Eff.OpenComputers.Address where
 
 import Prelude
 import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.OpenComputers (Component, ComponentType, Address)
+import Control.Monad.Eff.OpenComputers.Component (Component, ComponentType, Address)
 import Data.Either (Either(..))
 import Data.Maybe (Maybe(..), fromMaybe)
 import Data.List (List(..))

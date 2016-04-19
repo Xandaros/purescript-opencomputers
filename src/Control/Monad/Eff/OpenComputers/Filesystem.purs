@@ -1,4 +1,25 @@
-module Control.Monad.Eff.OpenComputers.Filesystem where
+module Control.Monad.Eff.OpenComputers.Filesystem
+    ( isAutorunEnabled
+    , setAutorunEnabled
+    , proxy
+    , mount
+    , mounts
+    , umount
+    , umountPath
+    , isLink
+    , getLink
+    , link
+    , get
+    , exists
+    , size
+    , isDirectory
+    , lastModified
+    , list
+    , makeDirectory
+    , remove
+    , rename
+    , copy
+    ) where
 
 import Prelude
 import Control.Monad.Eff (Eff)

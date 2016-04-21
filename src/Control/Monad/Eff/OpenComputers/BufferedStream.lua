@@ -50,7 +50,7 @@ exports.readLineImpl = function(left)
     return function(right)
         return function(stream)
             return function()
-                local ret, msg = stream:read("l")
+                local ret, msg = stream:read("*l")
                 if ret then
                     return right(ret)
                 else
@@ -65,7 +65,7 @@ exports.readAllImpl = function(left)
     return function(right)
         return function(stream)
             return function()
-                local ret, msg = stream:read("a")
+                local ret, msg = stream:read("*a")
                 if ret then
                     return right(ret)
                 else

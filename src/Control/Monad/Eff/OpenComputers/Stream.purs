@@ -43,9 +43,9 @@ foreign import close :: forall r e. Stream r e -> Eff e Unit
 
 foreign import seekImpl :: forall r e a b. (a -> Either a b) -> (b -> Either a b) -> Stream (seek :: Seek | r) e -> String -> Int -> Eff e (Either String Int)
 seek :: forall r e. Stream (seek :: Seek | r) e -> Whence -> Int -> Eff e (Either String Int)
-seek stream = seekImpl Left Right stream <<< whenceToLua
+seek stream = seekImpl Left Right stream <<< show
 
-whenceToLua :: Whence -> String
-whenceToLua Set = "set"
-whenceToLua Cur = "cur"
-whenceToLua End = "end"
+instance showWhence :: Show Whence where
+    show Set = "set"
+    show Cur = "cur"
+    show End = "end"

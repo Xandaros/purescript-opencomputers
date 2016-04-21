@@ -2,7 +2,7 @@
 
 local exports = {}
 
-local ecomponent = require("component")
+local component = require("component")
 
 exports.isAvailable = function()
     return component.isAvailable("internet")

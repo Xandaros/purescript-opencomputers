@@ -5,7 +5,7 @@ local exports = {}
 local buffer = require("buffer")
 
 exports.fromStream = function(stream)
-    return buffer.new(stream, stream.mode)
+    return buffer.new(stream.mode, stream)
 end
 
 exports.close = function(stream)
@@ -140,5 +140,7 @@ exports.writeImpl = function(left)
         end
     end
 end
+
+exports.error = error
 
 return exports

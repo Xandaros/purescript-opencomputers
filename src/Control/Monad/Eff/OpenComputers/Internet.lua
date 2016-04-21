@@ -84,6 +84,16 @@ if component.isAvailable("internet") then
             end
         end
     end
+
+    exports.tcpOpen = function(addr)
+        return function(port)
+            return function()
+                local ret = internet.socket(addr, port)
+                ret.mode = "rwb"
+                return ret
+            end
+        end
+    end
 end
 
 return exports

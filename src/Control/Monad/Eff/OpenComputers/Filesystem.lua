@@ -223,4 +223,22 @@ exports.copyImpl = function(left)
     end
 end
 
+exports.openImpl = function(left)
+    return function(right)
+        return function(mode)
+            return function(path)
+                return function()
+                    local ret, msg = filesystem.open(path, mode)
+                    if ret then
+                        ret.mode = mode
+                        return right(ret)
+                    else
+                        return left(msg)
+                    end
+                end
+            end
+        end
+    end
+end
+
 return exports

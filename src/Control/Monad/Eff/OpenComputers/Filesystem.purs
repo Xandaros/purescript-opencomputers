@@ -19,15 +19,23 @@ module Control.Monad.Eff.OpenComputers.Filesystem
     , remove
     , rename
     , copy
+    , openR
+    , openRB
+    , openW
+    , openWB
+    , openA
+    , openAB
     ) where
 
 import Prelude
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.OpenComputers.Component (Proxy, Filesystem, Component)
+import Control.Monad.Eff.OpenComputers.Stream (Stream, Writable, Readable, Seek, Binary)
 import Data.Either (Either(..))
 import Data.Maybe(Maybe(..))
 import Data.Tuple (Tuple(..))
 import Data.OpenComputers.Path (Path)
+import Unsafe.Coerce (unsafeCoerce)
 
 foreign import isAutorunEnabled :: forall e. Eff (filesystem :: Filesystem | e) Boolean
 foreign import setAutorunEnabled :: forall e. Boolean -> Eff (filesystem :: Filesystem | e) Unit
@@ -82,4 +90,22 @@ foreign import copyImpl :: forall e a b. (a -> Either a b) -> (b -> Either a b) 
 copy :: forall e. Path -> Path -> Eff (filesystem :: Filesystem | e) (Either String Unit)
 copy = copyImpl Left Right
 
---open?
+foreign import openImpl :: forall r e f a b. (a -> Either a b) -> (b -> Either a b) -> String -> Path -> Eff (filesystem :: Filesystem | e) (Either String (Stream r (filesystem :: Filesystem | f)))
+
+openR :: forall r e f. Path -> Eff (filsystem :: Filesystem | e) (Either String (Readable (seek :: Seek | r) (filesystem :: Filesystem | f)))
+openR = unsafeCoerce <<< openImpl Left Right "r"
+
+openRB :: forall r e f. Path -> Eff (filsystem :: Filesystem | e) (Either String (Readable (binary :: Binary, seek :: Seek | r) (filesystem :: Filesystem | f)))
+openRB = unsafeCoerce <<< openImpl Left Right "rb"
+
+openW :: forall r e f. Path -> Eff (filsystem :: Filesystem | e) (Either String (Writable (seek :: Seek | r) (filesystem :: Filesystem | f)))
+openW = unsafeCoerce <<< openImpl Left Right "w"
+
+openWB :: forall r e f. Path -> Eff (filsystem :: Filesystem | e) (Either String (Writable (binary :: Binary, seek :: Seek | r) (filesystem :: Filesystem | f)))
+openWB = unsafeCoerce <<< openImpl Left Right "wb"
+
+openA :: forall r e f. Path -> Eff (filsystem :: Filesystem | e) (Either String (Writable (seek :: Seek | r) (filesystem :: Filesystem | f)))
+openA = unsafeCoerce <<< openImpl Left Right "a"
+
+openAB :: forall r e f. Path -> Eff (filsystem :: Filesystem | e) (Either String (Writable (binary :: Binary, seek :: Seek | r) (filesystem :: Filesystem | f)))
+openAB = unsafeCoerce <<< openImpl Left Right "ab"

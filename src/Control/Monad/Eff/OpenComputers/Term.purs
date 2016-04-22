@@ -3,6 +3,8 @@ module Control.Monad.Eff.OpenComputers.Term where
 import Prelude
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.OpenComputers.Component (Component, Proxy, Window, Screen, Keyboard, GPU)
+import Control.Monad.Eff.OpenComputers.Stream (Binary)
+import Control.Monad.Eff.OpenComputers.BufferedStream (BufferedReadable, BufferedWritable)
 import Data.List (List)
 
 type Viewport = { width :: Int
@@ -30,3 +32,6 @@ foreign import write :: forall e. Boolean -> String -> Eff (window :: Window, sc
 --drawText :: forall e. Boolean -> String -> Eff (window ::)
 foreign import screen :: forall e. Eff (window :: Window, component :: Component | e) (Proxy Screen)
 foreign import keyboard :: forall e. Eff (window :: Window, component :: Component | e) (Proxy Keyboard)
+foreign import stdin :: forall e f. Eff (window :: Window | e) (BufferedReadable (binary :: Binary) (screen :: Screen, keyboard :: Keyboard | f))
+foreign import stdout :: forall e f. Eff (window :: Window | e) (BufferedWritable (binary :: Binary) (screen :: Screen, keyboard :: Keyboard | f))
+foreign import stderr :: forall e f. Eff (window :: Window | e) (BufferedWritable (binary :: Binary) (screen :: Screen, keyboard :: Keyboard | f))

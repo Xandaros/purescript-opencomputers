@@ -96,4 +96,16 @@ exports.keyboard = function()
     return term.keyboard()
 end
 
+exports.stdin = function()
+    return io.stdin
+end
+
+exports.stdout = function()
+    return io.stdout
+end
+
+exports.stderr = function()
+    return io.stderr
+end
+
 return exports

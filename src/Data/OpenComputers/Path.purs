@@ -1,7 +1,7 @@
 module Data.OpenComputers.Path where
 
 import Prelude
-import Data.Monoid (Monoid)
+import Data.Monoid (class Monoid)
 
 newtype Path = Path String
 
